@@ -5,6 +5,8 @@ versions follow semver. Tagging `vX.Y.Z` publishes `ghcr.io/lexmount/artifact-si
 
 ## Unreleased
 
+- Update dependencies with published security advisories: Next.js 16.4.3 (Image Optimization and `use cache` RCE, cache poisoning, SSRF), sharp 0.35.5 (librsvg), zod 4.6.7, the MCP TypeScript SDK 1.32.2 (also raised as the CLI's minimum), vite 8.3.5 and vitest 4.1.12, plus transitive fixes (proxy-addr, body-parser, fast-uri, hono, ip-address, source-map-js, puppeteer-core). `npm audit` now reports no vulnerabilities in the app or the CLI. Rebuild images to pick up Node.js 24.22.1+ (CVE-2026-111497 "Node2Shell" and the other October 2026 Node.js security fixes).
+
 - Show recoverable account-page errors when tenant access or browser-artifact checks fail, with independent retries that preserve other available account actions.
 
 - Show collection sharing beside the All sites heading with a shared-state icon badge. Replace the account Workspaces entry with role-appropriate tenant settings, and separate explicit browser-artifact claiming into a default-tenant confirmation page.
